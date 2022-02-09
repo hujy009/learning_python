@@ -1,0 +1,21 @@
+#coding:utf-8
+
+class Fibs:
+    def __init__(self, max):
+        self.max = max
+        self.a = 0
+        self.b = 1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        fib = self.a
+        if fib > self.max:
+            raise StopIteration
+        self.a, self.b = self.b, self.a + self.b        # Mr. Hu: self.a + self.b 中的self.a还没有改变成self.b的值
+        return fib
+
+fibs = Fibs(1000000)
+lst = [fibs.__next__() for i in range(10)]
+print(lst)

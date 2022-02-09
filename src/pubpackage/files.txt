@@ -1,0 +1,1 @@
+d:\home\huht\pyvirtualenv\py39pt1_9\lib\site-packages\myproject-0.0.5-py3.9.egg

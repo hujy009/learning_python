@@ -1,0 +1,10 @@
+.vscode/
+.env
+**/__pycache__
+.history/
+*.html
+build/
+.idea/
+_*
+!__init__.py
+.gitreview

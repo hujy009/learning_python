@@ -8,3 +8,4 @@ build/
 _*
 !__init__.py
 .gitreview
+.ipynb_checkpoints/

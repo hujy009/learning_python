@@ -9,7 +9,7 @@ class MyRange:
         return self
 
     def __next__(self):
-        if self.i <= self.n:       # Mr. Hu: 和一般的range不同
+        if self.i <= self.n:       # Mr. Hu: my range
             i = self.i
             self.i += 1
             return i

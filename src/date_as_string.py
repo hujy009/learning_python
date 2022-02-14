@@ -1,4 +1,11 @@
 # coding: utf-8
+"""
+Define a date: 
+    input: year, month, day
+    or string year_month_day
+    output month/day, year
+"""
+
 
 class Date(object):
     def __init__(self, year=0, month=0, day=0):
@@ -14,13 +21,26 @@ class Date(object):
         return mydate
 
     @staticmethod
-    def is_date_valid(date_as_string):
+    def is_input_valid(date_as_string):
         # mydate = Date.date(date_as_string)
         year, month, day = map(int, date_as_string.split('-'))
         return day <= 31 and month <= 12 and year <= 2038
 
-d = Date.from_string('2019-11-11')
+    @staticmethod
+    def is_date_valid(date):
+        year, month, day = date.year, date.month, date.day
+        return day <= 31 and month <= 12 and year <= 2038
 
-is_date = Date.is_date_valid('2019-11-11')
+    def __str__(self):
+        return f"{self.month}/{self.day}, {self.year}"
+
+d = Date.from_string('2019-11-11')
+print(d)
+
+is_input = Date.is_input_valid('2019-11-11')
+
+print(is_input)
+
+is_date = Date.is_date_valid(d)
 
 print(is_date)
